@@ -19,7 +19,7 @@ def date_detect(date):
         dd,mm,yyyy = date_check.group(1),date_check.group(2),date_check.group(3)
 
         #Not a leap year
-        if int(yyyy) % 4 != 0 or (int(yyyy) % 4 == 0 and int(yyyy) % 100 == 0 and int(yyyy) % 400 != 0):
+        if int(yyyy) % 4 != 0 or (int(yyyy) % 4 == int(yyyy) % 100 == 0 and int(yyyy) % 400 != 0):
             #Valid month
             if mm in vdates: 
                 return int(dd) in range(vdates[mm])
