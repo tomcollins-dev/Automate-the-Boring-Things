@@ -18,7 +18,7 @@ def date_detect(date):
         #Assign groups to variables representing dateparts
         dd,mm,yyyy = date_check.group(1),date_check.group(2),date_check.group(3)
 
-        #Not a leap year
+        #Not a leap year - Disgusting check
         if int(yyyy) % 4 != 0 or (int(yyyy) % 4 == int(yyyy) % 100 == 0 and int(yyyy) % 400 != 0):
             #Valid month
             if mm in vdates: 
