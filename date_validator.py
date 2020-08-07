@@ -1,4 +1,4 @@
-def valid_date(date):
+def date_detect(date):
     import re
     #Define acceptable date bounds
     vdates = {
@@ -15,7 +15,7 @@ def valid_date(date):
     if date_check is None:
         return False
     else:
-        #Assign groupings to variables representing dateparts
+        #Assign groups to variables representing dateparts
         dd,mm,yyyy = date_check.group(1),date_check.group(2),date_check.group(3)
 
         #Not a leap year
